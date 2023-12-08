@@ -16,8 +16,8 @@ mongoose.connect(mongoString, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
-    // .then(() => console.log("connected to DB"))
-    // .catch(() => console.log("error"))
+    .then(() => console.log("connected to DB"))
+    .catch(() => console.log("error"))
 
 app.post('/register', async (req, res) => {
         const {username, password} = req.body
@@ -153,7 +153,7 @@ app.delete('/todolist/:id', async (req, res) => {
     }
 
 })
-// const PORT = process.env.PORT || 3000
-// app.listen(PORT, () => {
-//     console.log(`Server is running on port ${PORT}`)
-// })
+const PORT = process.env.PORT || 3000
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`)
+})
