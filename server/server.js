@@ -24,7 +24,7 @@ mongoose.connect(mongoString, {
     .then(() => console.log("connected to DB"))
     .catch(() => console.log("error"))
 
-app.post('/api/register', async (req, res) => {
+app.post('/register', async (req, res) => {
         const {username, password} = req.body
         try {
             const existingUser = await User.findOne({username}).exec()
@@ -42,13 +42,13 @@ app.post('/api/register', async (req, res) => {
     }
 )
 
-app.post('/api/login', async (req, res) => {
+app.post('/login', async (req, res) => {
     const {username, password} = req.body
+
     try {
-        if (!checkUser || checkUser.password !== password) {
-            // res.status(401)
-            // res.send("Invalid username or password. Please try again.")
-            // return
+        const existingUser = await User.findOne({username}).exec()
+        if (!existingUser || existingUser.password !== password) {
+            // User not found or password incorrect
             return res.status(401).json({message: 'Invalid username or password. Please try again.'})
         }
 
@@ -57,13 +57,7 @@ app.post('/api/login', async (req, res) => {
         console.error('Error during login:', error)
         return res.status(500).json({message: 'Internal Server Error'})
     }
-    const checkUser = await User.findOne({username}).exec()
 
-    const user = new User(req.body)
-    user.save()
-    res.json({
-        message: 'user created!'
-    })
 })
 
 app.get('/todolist', async (req, res) => {
@@ -165,8 +159,10 @@ app.delete('/todolist/:id', async (req, res) => {
     }
 
 })
-
-// app.listen(() => console.log('listening on port'))
+const PORT = process.env.PORT || 3000
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`)
+})
 /*
 * mongodb username and pw
 * username: shmtang
