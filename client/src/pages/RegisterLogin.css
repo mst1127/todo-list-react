@@ -1,0 +1,31 @@
+.loginRegisterContainer {
+  padding: 2rem;
+}
+.loginRegisterContainer h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+.loginRegisterContainer form {
+  margin-left: 0.5rem;
+}
+.loginRegisterContainer form h5 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--secondary);
+  margin-bottom: 0.5rem;
+}
+.loginRegisterContainer form input {
+  height: 1.5rem;
+  border-radius: 0.2rem;
+  border: 2px solid var(--dark-alt);
+  background-color: var(--light);
+  margin-bottom: 1rem;
+}
+.loginRegisterContainer .errorMsg {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=RegisterLogin.css.map */

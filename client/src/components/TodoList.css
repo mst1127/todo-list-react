@@ -1,0 +1,83 @@
+.todoContainer {
+  padding: 0.5rem;
+}
+.todoContainer .addNewTodo {
+  margin-bottom: 1rem;
+}
+.todoContainer .addNewTodo h5 {
+  margin-bottom: 0.5rem;
+  color: var(--dark-alt);
+}
+.todoContainer .addNewTodo input {
+  height: 1.5rem;
+  border-radius: 0.2rem;
+  border: 2px solid var(--dark-alt);
+  background-color: var(--light);
+}
+.todoContainer .addNewTodo button {
+  margin-left: 0.5rem;
+}
+.todoContainer .todoItem {
+  background-color: var(--secondary);
+  margin-bottom: 1rem;
+  padding: 1rem;
+  position: relative;
+  border-radius: 0.8rem;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+  cursor: default;
+  width: 33vw;
+}
+.todoContainer .todoItem:hover {
+  opacity: 0.8;
+}
+.todoContainer .todoItem .checkbox {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 1rem;
+  color: var(--primary);
+  cursor: pointer;
+  transition: 0.3s all ease-out;
+}
+.todoContainer .todoItem .checkbox:hover {
+  color: var(--light-alt);
+}
+.todoContainer .todoItem .todoContent {
+  font-size: 1rem;
+  color: var(--dark);
+}
+.todoContainer .todoItem .delTodo {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  width: 1.3rem;
+  height: 1.3rem;
+  transform: translateY(-50%);
+  color: var(--primary);
+  cursor: pointer;
+}
+.todoContainer .todoItem .delTodo:hover {
+  color: var(--light-alt);
+}
+.todoContainer .todoItemCompleted {
+  background-color: var(--light-alt);
+  opacity: 0.8;
+}
+.todoContainer .todoItemCompleted .checkbox {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--primary);
+  cursor: pointer;
+}
+.todoContainer .todoItemCompleted .checkbox:hover {
+  color: var(--dark-alt);
+}
+.todoContainer .todoItemCompleted .todoContent {
+  text-decoration: line-through;
+}
+.todoContainer .todoItemCompleted .delTodo:hover {
+  color: var(--dark-alt);
+}
+
+/*# sourceMappingURL=TodoList.css.map */
