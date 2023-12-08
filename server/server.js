@@ -4,8 +4,8 @@ const cors = require('cors')
 require('dotenv').config();
 // const routes = require('./routes/routes')
 // import "./loadEnvironment.mjs"
-const connectionStr = 'mongodb://itmd504-todo-list-server-server:6NewPGdujZTjki3CMlw6fna9Lj2Lkl2iNg8BpucdgCqSPjsJypMAIYHopv9uUpWfgn6uAiKuKi8tACDbTa9mUw%3D%3D@itmd504-todo-list-server-server.mongo.cosmos.azure.com:10255/?ssl=true&retrywrites=false&maxIdleTimeMS=120000&appName=@itmd504-todo-list-server-server@'
-// const mongoString = process.env.DATABASE_URL
+// const connectionStr = 'mongodb://itmd504-todo-list-server-server:6NewPGdujZTjki3CMlw6fna9Lj2Lkl2iNg8BpucdgCqSPjsJypMAIYHopv9uUpWfgn6uAiKuKi8tACDbTa9mUw%3D%3D@itmd504-todo-list-server-server.mongo.cosmos.azure.com:10255/?ssl=true&retrywrites=false&maxIdleTimeMS=120000&appName=@itmd504-todo-list-server-server@'
+const mongoString = process.env.DATABASE_URL
 // const SERVER_PORT = 3001
 
 const User = require('./models/User')
@@ -17,7 +17,7 @@ app.use(express.json())
 app.use(cors())
 // app.use('/api', routes)
 
-mongoose.connect(connectionStr, {
+mongoose.connect(mongoString, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
