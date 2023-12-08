@@ -7,15 +7,6 @@
   --light-alt: #F1EB90;
   --dark: #332727;
   --dark-alt: #EC8F5E;
-
-  //--primary: #f5564e;
-  //--secondary: #fc814c;
-  //--light: #f2ede9;
-  //--light-alt: #fab95b;
-  //--dark: #1b212d;
-  //--dark-alt: #1a3263;
-
-
 }
 
 * {
@@ -43,7 +34,6 @@ body {
       font-size: 1.5rem;
       margin-bottom: 2rem;
       color: var(--secondary);
-
     }
 
     h4 {
@@ -52,7 +42,6 @@ body {
       color: var(--secondary);
       margin-left: 0.5rem;
     }
-
   }
 
   button {
@@ -63,20 +52,15 @@ body {
     background-color: var(--dark-alt);
     color: var(--light);
     margin-bottom: 1rem;
-    //margin-left: 0.5rem;
-
 
     &:hover {
       background-color: var(--secondary);
       color: var(--light);
-
     }
-
   }
 
   .link {
     color: white;
     text-decoration: none;
   }
-
 }

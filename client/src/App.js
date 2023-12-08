@@ -8,13 +8,7 @@ import {createContext, useState} from "react";
 export const Credentials = createContext()
 
 function App() {
-    const currentUser = useState(
-    //     {  //todo: temp, use null and remove this later
-    //     username: "mt",
-    //     password: "1127"
-    // }
-        null
-    )
+    const currentUser = useState(null)
 
     return (
         <div className="App">
@@ -36,6 +30,3 @@ function App() {
 }
 
 export default App;
-
-//build full stack 25:25
-// live coding 56:00
